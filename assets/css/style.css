@@ -163,18 +163,25 @@ nav.fixed-top {
   #wrapper.toggle {
     margin-right: 0px;
   }
-  
+
   #navbarResponsive.toggle {
-  margin-right: 155px;
-}
-  
+    margin-right: 155px;
+  }
+
   .sidebar-heading{
     display: none;
   }
-  
+
   .list-group {
     margin-top: 93px
   }
+
+  nav .btn.main-btn {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+
+  }
+
 }
 
 /*Jumbotron Styles*/
@@ -284,7 +291,7 @@ blockquote h3 {
 .about-section .blue-bg:hover {
   background-color: #0E161F;
   color: white;
-/*  border: 1px solid #314F71;*/
+  /*  border: 1px solid #314F71;*/
 }
 
 .about-section .blue-bg a {
