@@ -10,8 +10,9 @@ html {
 
 body {
   border: 15px solid #f7f7f7;
-  font-family: serif;
   overflow-x: hidden;
+  font-family: 'Avant', sans-serif;
+  letter-spacing: 2px;
 }
 
 
@@ -38,7 +39,6 @@ body {
 /*General Styles*/
 .white-text {
   color: #FFF;
-  background:
 }
 
 .blue-text {
@@ -58,15 +58,17 @@ section, footer {
   border-bottom: 15px solid #F7F7F7;
 }
 
-.font-avant {
-  font-family: 'Avant', sans-serif;
-  letter-spacing: 2px;
+.font-serif {
+  font-family: serif, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 
 .main-btn {
   font-size: 20px;
   font-weight: 300;
   padding: 6px 30px 3px 30px;
+  letter-spacing: 2px;
   border: none;
   border-radius: 2px;
   background-image: linear-gradient(to left, #EEDFCF 50%, #314F71 50%);
@@ -84,6 +86,11 @@ section, footer {
   transition: all 0.35s ease-in;
   background-position: bottom left;
   color: #FFF;
+}
+
+.main-btn:active {
+  background-color: #EEDFCF;
+  color: #000;
 }
 
 .btn-circle {
@@ -147,8 +154,6 @@ nav.fixed-top {
 .list-group-item {
   background-color: transparent;
   color: #FFF;
-  font-family: 'Avant', serif;
-  letter-spacing: 2px;
 }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
@@ -316,14 +321,12 @@ blockquote h3 {
 .about-section .blue-bg:hover {
   background-color: #0E161F;
   color: white;
-  /*  border: 1px solid #314F71;*/
 }
 
 .about-section .blue-bg a {
   color: #FFF;
   font-size: 30px;
   padding: 20px;
-  font-style: italic;
 }
 
 .row-eq-height [class*='col-'] {

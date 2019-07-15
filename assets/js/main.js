@@ -36,6 +36,13 @@ $(function (){
 
 $(document).ready(function() {
   document.querySelector(".card-flip").classList.toggle("flip");
+
+  var listItem = document.getElementsByClassName('list-group-item');
+
+  for(let i=0; i<listItem.length; i++ ) {
+    listItem[i].addEventListener('click', closeNav);
+  }
+
 });
 
 $(window).scroll(function() {
@@ -49,24 +56,17 @@ $(window).scroll(function() {
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 
-$(function() {
-  $('a.nav-link').bind('click', function(event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
-  });
-});
-
 function openNav() {
   $('#sidebar-wrapper').toggleClass('toggle');
   $('#wrapper').toggleClass('toggle');
   $('#navbarResponsive').toggleClass('toggle');
 }
 
-$('#sidebar-wrapper').scrollspy({
-  offset: 50
-});
+function closeNav() {
+  $('#sidebar-wrapper').removeClass('toggle');
+  $('#wrapper').removeClass('toggle');
+  $('#navbarResponsive').removeClass('toggle');
+}
+
 
 
