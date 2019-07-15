@@ -126,7 +126,10 @@ nav.fixed-top {
 
 #navbarResponsive {
   transition: margin-right 0.5s;
+}
 
+#navbarResponsive.toggle .navbar-toggler {
+   transition: margin-right 0.5s;
 }
 
 #sidebar-wrapper.toggle {
@@ -157,17 +160,24 @@ nav.fixed-top {
   margin: 0px 20px 20px 20px;
 }
 
+.donate-btn {
+  display: none;
+}
 
 @media(max-width:768px) {
 
   #wrapper.toggle {
     margin-right: 0px;
   }
-
+  
   #navbarResponsive.toggle {
-    margin-right: 155px;
+    margin-right: 0px;
   }
 
+  #navbarResponsive.toggle .navbar-toggler {
+    margin-right: 150px;
+  }
+  
   .sidebar-heading{
     display: none;
   }
@@ -177,9 +187,18 @@ nav.fixed-top {
   }
 
   nav .btn.main-btn {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-
+    display: none;
+  }
+  
+  .donate-btn {
+    display: block;
+  }
+  
+ @media not all and (min-resolution:.001dpcm) { @media {
+     #navbarResponsive.toggle .navbar-toggler {
+        margin-right: 0px; 
+    }
+   }
   }
 
 }
